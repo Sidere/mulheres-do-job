@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    color: aliceblue;
+}
+
+body{
+    background-color: #FE9FF3;
+}
+
+section, footer{
+    padding: 54px 0;
+    background-color: blueviolet;
+}
+
+h3{
+    font-size: 50px;
+}
+
+p{
+    color: aliceblue;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+header{
+    background-image: url(itens/background_nav.png);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+nav ul{
+     display: flex;
+     align-items: center;
+    
+}
+
+nav ul a{
+     color: aliceblue;
+     margin: 0 25px;
+     text-transform: uppercase;
+     font-size: 16px;
+     display: block;
+}
+
+nav ul a:hover{
+    color: #8A2BE2;
+}
+
+nav ul a:not(.btn):after{
+    content: "";
+    background-color: #8A2BE2;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+
+.btn{
+    background-color: #222F3F;
+    color: aliceblue;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn.animate-btn{
+    animation: animate-outline 1s ease-out infinite;
+}
+
+.btn:hover{
+    background-color: #8A2BE2;
+    color: #f337e3;
+    
+}
+
+@keyframes animate-outline {
+    from{
+        outline: 0px solid #8A2BE2;
+    }
+    to{
+        outline: 15px solid #ecc3e8;
+    }
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.hero .hero-text{
+    margin: 150px;
+    text-align: start;
+    padding: 0 90px;
+}
+.hero .hero-text h1{
+    font-size: 34px;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.hero .hero-text p{
+    font-size: 16px;
+    color: aliceblue;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.blog .container{
+    display: flex;
+    align-items: center;
+}
+.blog .blog_text{
+    width: 50%;
+    padding: 0 40px;
+}
+.blog .blog_text h3{
+    font-size: 34px;
+    padding-bottom: 10px;
+}
+.blog .blog_text h4{
+    font-size: 16px;
+}
+.blog .blog_text p{
+    margin: 5px 0 10px 0;
+}
+.blog .blog_img{
+    width: 50%;
+}
+.blog .blog_img img{
+    width: 100%;
+}
+.eventos h3{
+    text-align: center;
+    font-size: 34px;
+}
+.eventos p{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+}
+.eventos .card-item{
+    background-color: #8A2BE2;
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+    transition: 0.3s;
+}
+.eventos .card-item img{
+    border-radius: 100%;
+    width: 80px;
+    display: block;
+    margin: 30px auto;
+}
+
+.eventos .card-item p{
+    font-size: 16px;
+    padding-bottom: 20px;
+    
+}
+
+.eventos .card-item .evento-nome{
+    font-weight: 600;
+    font-size: 21px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.eventos .card-item .evento-resumo{
+    font-size: 15px;
+    padding: 0 15px;
+    color: #fff;
+    transition: 0.3s;
+}
+.eventos .card-item:hover{
+    background-color: #f337e3;
+    margin-top: -5px;
+}
+.eventos .card-item:hover .evento-nome{
+    color: #8A2BE2;
+}
+
+@media (max-width: 1440px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .hero-text, .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 80%;
+    }
+}
+
+
