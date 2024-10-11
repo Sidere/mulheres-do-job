@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Mulheres do Job</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,11 +16,17 @@
                     <img src="itens/logo.png" alt="Mulheres Empreendedoras">
                 </a>
                 </div>
-                <ul class="nav_bar">
+                <ul class="ul">
                     <a href="#eventos">Eventos & Workshops</a>
                     <a href="#blog">Blog</a>
                     <a class="btn" href="#mentoria">Mentorias</a>
+                    <div class="close-icon" onclick="closeMenu()">
+                        <i class="fa-solid fa-circle-xmark" ></i>
+                    </div>
                 </ul>
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa-solid fa-bars" ></i>
+                </div>
             </nav>
         </div>    
     </header>
@@ -97,14 +104,37 @@
         </div>
     </section>
     <section class="mentoria">
-
+        <div class="container">
+            <div class="contato-info">
+                <div class="left-side">
+                    <div>  
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <p> Caruaru, Pernambuco</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p> sideresid@gmail.com</p>
+                    </div>  
+                </div>
+                <div class="right-side">
+                    <form action="">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="email" placeholder="E-mail" required>
+                        <input type="number" placeholder="Número" required>
+                        <textarea cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
+                        <button class="btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+            </div>
     </section>
+    <script src="anima.js"></script>
     <footer class="footer">
-        <div class="link-git">
-            <a href="https://github.com/Sidere"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
-        </div>
         <p>&copy; 2024 Mulheres do Job</p>
         <p>Desenvolvido por Poliana Sidere</p>
+        <div class="link-git">
+            <a href="https://github.com/Sidere" target="_blank"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
+        </div>
         
     </footer>
         

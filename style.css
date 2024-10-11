@@ -31,6 +31,32 @@ p{
     margin: 0 auto;
     padding: 0 5%;
 }
+.btn{
+    background-color: #222F3F;
+    color: aliceblue;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn.animate-btn{
+    animation: animate-outline 1s ease-out infinite;
+}
+
+.btn:hover{
+    background-color: #8A2BE2;
+    color: #f337e3;
+    
+}
+
+@keyframes animate-outline {
+    from{
+        outline: 0px solid #8A2BE2;
+    }
+    to{
+        outline: 15px solid #ecc3e8;
+    }
+}
 
 header{
     background-image: url(itens/background_nav.png);
@@ -77,48 +103,33 @@ nav ul a:not(.btn):after{
 nav ul a:hover::after{
     width: 100%;
 }
-
-.btn{
-    background-color: #222F3F;
-    color: aliceblue;
-    padding: 15px 20px;
-    border-radius: 10px;
+/*menu mobile*/
+nav .menu-icon{
     cursor: pointer;
-    display: inline-block;
+    font-size: 25px;
+    display: none;
+    color: #fff;
 }
-.btn.animate-btn{
-    animation: animate-outline 1s ease-out infinite;
+nav .close-icon{
+    display: none;
+    font-size: 25px;
+    color: #fff;
 }
-
-.btn:hover{
-    background-color: #8A2BE2;
-    color: #f337e3;
-    
-}
-
-@keyframes animate-outline {
-    from{
-        outline: 0px solid #8A2BE2;
-    }
-    to{
-        outline: 15px solid #ecc3e8;
-    }
-}
-
 .hero{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     background-size: cover;
-    background-position: center;
+    background-position:center;
     
 }
 
 .hero .hero-text{
     margin: 150px;
-    text-align: start;
+    text-align:start;
     padding: 0 90px;
 }
 .hero .hero-text h1{
+
     font-size: 34px;
     color: aliceblue;
     padding: 10px;
@@ -209,33 +220,109 @@ nav ul a:hover::after{
     color: #8A2BE2;
 }
 
-.footer{
-    background-color: #8A2BE2;
-    color: aliceblue;
-    font-size: 16px;
-    text-align: center;
-    padding: 20px;
-    
+.contato-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
 }
 
-@media (max-width: 1440px) {
-    .hero {
+.contato-info .left-side{
+    width: 50%;
+    padding: 30px;
+    background-color: #f337e3;
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+}
+.contato-info .left-side div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contato-info .left-side div i{
+    font-size: 21px;
+    margin-right: 20px;
+    color: aliceblue;
+}
+.contato-info .left-side p{
+    font-size: 16px;
+    color: aliceblue;
+}
+.contato-info .right-side{
+    width: 50%;
+}
+.contato-info .right-side input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid aliceblue;
+    color: aliceblue;
+}
+
+.contato-info .right-side input:focus,
+.contato-info .right-side textarea:focus{
+    background-color: #f337e3 ;
+}
+
+.contato-info .right-side textarea{
+    border: 1px solid aliceblue;
+    color:aliceblue ;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    transition: 0.3s;
+    resize: none;
+}
+.footer {
+    background-color: #8A2BE2;
+    text-align: center;
+}
+
+.footer i{
+    color: aliceblue;
+    font-size: 34px;
+    padding: 20px;
+}
+
+
+@media (max-width: 830px){
+    /*menu mobile*/
+    .ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #8A2BE2;
+        width: 100%;
+        height: 100%;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0 at 100% 0);
+        transition: 0.7s;
     }
-
-    header nav ul {
-        flex-direction: row;
-        gap: 10px;
+    ul .open{
+        clip-path: circle(141.2% at 100% 0);
     }
-
-    .hero-text, .hero-image {
-        max-width: 100%;
+    .ul a{
+        margin: 10px 0;
+        font-size: 16px;
     }
-
-    .hero-image img {
-        width: 80%;
+    nav .menu-icon{
+        display: block;
     }
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+    /*pag responsiva*/
+    
 }
 
 
