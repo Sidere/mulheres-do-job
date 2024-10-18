@@ -103,6 +103,7 @@ nav ul a:not(.btn):after{
 nav ul a:hover::after{
     width: 100%;
 }
+
 /*menu mobile*/
 nav .menu-icon{
     cursor: pointer;
@@ -115,12 +116,12 @@ nav .close-icon{
     font-size: 25px;
     color: #fff;
 }
+
 .hero{
     display: flex;
     justify-content: left;
     background-size: cover;
-    background-position:center;
-    
+    background-position:center;   
 }
 
 .hero .hero-text{
@@ -177,6 +178,7 @@ nav .close-icon{
 .cards{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .eventos .card-item{
     background-color: #8A2BE2;
@@ -305,7 +307,7 @@ nav .close-icon{
         clip-path: circle(0 at 100% 0);
         transition: 0.7s;
     }
-    ul .open{
+    ul.open{
         clip-path: circle(141.2% at 100% 0);
     }
     .ul a{
@@ -322,7 +324,68 @@ nav .close-icon{
         right: 28px;
     }
     /*pag responsiva*/
+
+    .hero .hero-text{
+        padding: 0;
+        margin: 80px;
+    }
+
+    .hero .hero-text h1{
+        font-size: 42px;
+    }
     
+    .hero .hero-text p{
+        font-size: 21px;
+    }
+
+   .blog .blog_text{
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;        
+   }
+
+   .blog .container{
+        flex-direction: column-reverse;
+   }
+
+   .blog .blog_text h3{
+        font-size: 48px;
+   }
+
+   .blog .blog_text,
+   .blog .blog_img{
+        width: 100%;
+   }
+
+   .eventos .cards{
+        width: 100%;
+        justify-content: center;
+   }
+
+   .contato-info{
+    flex-direction: column-reverse;
+   }
+
+   .contato-info .left-side,
+   .contato-info .right-side{
+    width: 100%;
+   }
+
+   .contato-info .right-side{
+    margin-bottom: 30px;
+   }
+}
+@media (max-width: 500px){
+    .hero .hero-text h1{
+        font-size: 21px;
+    }
+    .hero .hero-text p{
+        font-size: 13px;
+    }
+
+    .blog .blog_text h3{
+        font-size: 34px;
+    }
 }
 
 
